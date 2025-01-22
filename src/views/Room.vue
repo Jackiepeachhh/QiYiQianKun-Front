@@ -325,7 +325,8 @@ const handleGameStartMsg = () => {
 
 const fetchRoom = async ()=>{
   const data = await getRoom(room.roomId);
-  room.enemyState = data.redPlayer ? data.redPlayer : data.blackPlayer ? data.blackPlayer : null;
+  const player = data.redPlayer || data.redPlayer
+  room.enemyState = player;
 }
 
 onMounted(async () => {

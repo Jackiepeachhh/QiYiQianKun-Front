@@ -1,6 +1,7 @@
 <template>
 
     <div class="container">
+      <online-player :isRed="true" :myState="room.redPlayer" :enemyState="room.blackPlayer"></online-player>
       <chess-board ref="boardMethod" 
       :ableClick="ableClick" 
       :isRedTurn="room.playingGame.isRedTurn">
@@ -14,7 +15,7 @@
 <script setup>
 import { ref, onMounted, reactive, onUnmounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { showConfirmDialog, showFailToast, showSuccessToast } from 'vant';
+import {  showFailToast, showSuccessToast } from 'vant';
 import myMenu from '../components/myMenu.vue';
 import ChessBoard from '../components/chessBoard.vue';
 import ButtonBars from '../components/buttonBars.vue';
@@ -23,8 +24,7 @@ import chessIcon from '@/assets/icon/chess.png'
 import turnIcon from '@/assets/icon/turn.png'
 import { sendMessage, subscribeTopic, unsubscribeAll, unsubscribeTopic } from '../services/stomp';
 import { getRoom } from '../services/room';
-import { initBoard } from '../constants/clasli';
-
+import onlinePlayer from '../components/onlinePlayer.vue';
 const route = useRoute();
 const router = useRouter();
 const boardMethod = ref()
@@ -99,27 +99,36 @@ const handleGameOverMsg = (gameOverMessage) => {
 
 const fetchViewRoom = async () => {
   const data = await getRoom(room.roomId);
+  console.log(data)
   room.isPlaying = data.isPlaying
   room.redPlayer = data.redPlayer
   room.blackPlayer = data.blackPlayer
-  room.playingGame.moves = data.playingGame.moves
+  room.playingGame.moves = data.playingGame.moves.map(move => {
+    return {
+    from:{ x:move.fromX , y:move.fromY},
+    to:{ x:move.toX,y:move.toY},
+    movePiece:move.movePiece,
+    eatPiece:move.eatPiece,
+  }})
   room.playingGame.isRedTurn = data.playingGame.isRedTurn
-  const initBoard = data.playingGame.board.map(piece => piece.name)
+  const initBoard = data.playingGame.board.map(row => 
+    row.map(piece => piece ? piece.name : null)
+  );
   const move = room.playingGame.moves.length ? room.playingGame.moves[room.playingGame.moves.length-1] : null
   boardMethod.value.initBoard(initBoard,move);
 }
 
-onMounted(() => {
+onMounted(async () => {
+  sendJoinMsg()
+  await fetchViewRoom()
   if (!room.isPlaying) {
     showFailToast("对局已结束！");
     router.go(-1)
     return;
   }
-  fetchViewRoom()
   subscribeTopic(`/room/${room.roomId}/move`, handleMoveMsg);
   subscribeTopic(`/room/${room.roomId}/un-move`, handleUnMoveMsg);
   subscribeTopic(`/room/${room.roomId}/game-over`, handleGameOverMsg);
-  sendJoinMsg()
 });
 
 onUnmounted(() => {

@@ -7,7 +7,7 @@ export const joinRoom = () => {
 };
 
 export const getRoom = (roomId) => {
-  return axios.get(`room/${roomId}`);
+  return axios.get(`/room/${roomId}`);
 };
 
 export const listViewRooms = ()=>{

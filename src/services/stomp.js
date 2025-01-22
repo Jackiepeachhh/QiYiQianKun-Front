@@ -6,8 +6,8 @@ const subscriptionMap = new Map()
 export const connectWebSocket = () =>{
   if(client) return ; 
   const token = localStorage.getItem("Token") || '';
-  const socket = new SockJS(`http://120.26.130.74/api/ws?Token=${token}`);
-  // const socket = new SockJS(`http://localhost:8080/ws?Token=${token}`);
+  //const socket = new SockJS(`http://120.26.130.74/api/ws?Token=${token}`);
+   const socket = new SockJS(`http://localhost:8080/api/ws?Token=${token}`);
   client = Stomp.over(socket);
   client.connect({}, frame => {})
 }

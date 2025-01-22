@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { showFailToast } from 'vant';
 // baseURL的设置
-axios.defaults.baseURL = 'http://120.26.130.74/api'
-// axios.defaults.baseURL = 'http://localhost:8080'
+// axios.defaults.baseURL = 'http://120.26.130.74/api'
+axios.defaults.baseURL = 'http://localhost:8080/api'
 // 允许跨域携带cookie
 axios.defaults.withCredentials = true
 // 用于识别axios请求
