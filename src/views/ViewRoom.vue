@@ -1,7 +1,7 @@
 <template>
 
     <div class="container">
-      <online-player :isRed="true" :myState="room.redPlayer" :enemyState="room.blackPlayer"></online-player>
+      <online-player :isRed="true" :myState="room.redPlayer" :enemyState="room.blackPlayernp"></online-player>
       <chess-board ref="boardMethod" 
       :ableClick="ableClick" 
       :isRedTurn="room.playingGame.isRedTurn">

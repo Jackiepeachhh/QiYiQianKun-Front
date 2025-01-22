@@ -14,6 +14,7 @@
     "js-md5": "^0.8.3",
     "sockjs-client": "^1.6.1",
     "vant": "^4.9.16",
+    "vite-plugin-top-level-await": "^1.4.4",
     "vue": "^3.4.21",
     "vue-router": "^4.5.0"
   },
