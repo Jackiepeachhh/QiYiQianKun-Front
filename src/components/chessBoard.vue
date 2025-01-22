@@ -228,6 +228,6 @@ onMounted(()=>{
 }
 
 .chess-canvas {
-  width: 480px;
+  height: calc(100vh - 300px);
 }
 </style>
