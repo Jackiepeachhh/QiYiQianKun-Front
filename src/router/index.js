@@ -83,17 +83,17 @@ const router = createRouter({
 });
 
 
-// router.beforeEach(async (to, from, next) => {
-//   if (to.matched.some(record => record.meta.requiresAuth)) {
-//     try {
-//       await checkLoginStatus();
-//       next();
-//     } catch (error) {
-//       next({ name: 'Login' });
-//     }
-//   } else {
-//     next();
-//   }
-// });
+router.beforeEach(async (to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    try {
+      await checkLoginStatus();
+      next();
+    } catch (error) {
+      next({ name: 'Login' });
+    }
+  } else {
+    next();
+  }
+});
 
 export default router;
