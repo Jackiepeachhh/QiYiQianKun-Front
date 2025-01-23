@@ -227,7 +227,15 @@ onMounted(()=>{
   margin: 120px 0 20px 0;
 }
 
-.chess-canvas {
-  height: calc(100vh - 300px);
+@media (max-width: 600px)  {
+  .chess-canvas {
+    width: 95vw;
+  }
+}
+
+@media (min-width: 601px)  {
+  .chess-canvas {
+    height: calc(100vh - 300px);
+  }
 }
 </style>
