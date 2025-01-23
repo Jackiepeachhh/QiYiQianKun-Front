@@ -1,7 +1,40 @@
-# Vue 3 + Vite
+# 软件工程项目——中国象棋
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+华中科技大小2022届软件工程项目——中国象棋，前端部分，后端项目地址https://github.com/leicd458/My-CChess-Back
 
-## Recommended IDE Setup
+## 框架
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+Vue + Vite
+
+## 如何运行
+
+### 下载项目
+
+```
+git clone https://github.com/leicd458/My-CChess-Front.git
+```
+
+### 下载依赖
+
+在项目的根目录下，输入
+
+```
+npm install
+```
+
+### 运行项目
+
+```
+npm run dev
+```
+
+### 打包成dist文件夹
+
+```
+npm run build
+```
+
+## 演示网站
+
+ https://hustcchess.xyz
+
