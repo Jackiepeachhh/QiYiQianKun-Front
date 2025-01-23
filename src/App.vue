@@ -23,11 +23,12 @@ a{
 }
 
 .bg {
-  height: 100vh;
+  height: 100dvh;
   width: 100vw;
   background: url("@/assets/img/background.jpg") repeat center center fixed;
   display: flex;
   justify-content: center;
+
 }
 
 .container{

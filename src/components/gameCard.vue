@@ -60,7 +60,7 @@ const props = defineProps({
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 12px;
-  width: 450px;
+  width: min(450px,75vw);
   background-color: #CB985F;
 }
 
@@ -85,7 +85,7 @@ const props = defineProps({
 
 .left-player,
 .right-player {
-  width: 180px;
+  width: min(180px,30vw);
   flex: none; /* 不让player元素占据等宽，而是使用固定宽度 */
   display: flex;
   align-items: center;
@@ -98,25 +98,25 @@ const props = defineProps({
 
 
 .icon-left {
-  width: 60px;
-  height: 60px;
+  width: min(60px,9vw);
+  height: min(60px,9vw);
   margin-left: 10px;
 }
 .icon-center {
-  width: 70px;
-  height: 70px;
+  width: min(70px,10vw);
+  height: min(70px,10vw);
 }
 .icon-right {
-  width: 60px;
-  height: 60px;
+  width: min(60px,9vw);
+  height: min(60px,9vw);
   margin-right: 0;
 }
 
 
 .player-info {
-  width: 120px;
+  width: min(120px,20vw);
   text-align: center;
-  font-size: 24px;
+  font-size: clamp(12px,4vw,24px);
   color: #e0e0e0;
   white-space: nowrap; /* 防止文本换行 */
   overflow: hidden;    /* 隐藏溢出内容 */

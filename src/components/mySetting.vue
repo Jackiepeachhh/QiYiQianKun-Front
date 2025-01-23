@@ -47,12 +47,12 @@ const {setings,value} = toRefs(props)
 .modal-content {
   background-color: #fff;
   padding: 20px;
-  width: 350px;
+  width: min(350px,100vw);
   border-radius: 12px;
 }
 
 .modal-content h2{
-  font-size: 30px;
+  font-size: clamp(16px,6vw,30px);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -64,22 +64,20 @@ const {setings,value} = toRefs(props)
 }
 
 .form-group label {
-  width: 150px;
+  width: min(150px,25vw);
   display: flex;
   justify-content: center;
   font-size: 24px;
 }
 
 .form-group-select {
-  width: 150px;
+  width: min(150px,25vw);
   padding: 10px 0 10px 40px;
-  font-size: 20px;
+  font-size: clamp(12px,4vw,20px);
   border-radius: 5px;
   border: 1px solid #ccc;
   
 }
-
-
 
 
 .btn-group {
@@ -89,7 +87,7 @@ const {setings,value} = toRefs(props)
 .btn-group button {
   padding: 10px 20px;
   margin: 10px 15px;
-  font-size: 20px;
+  font-size: clamp(12px,4vw,20px);
   background-color: #4682B4;
   color: white;
   border-radius: 5px;

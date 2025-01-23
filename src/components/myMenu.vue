@@ -24,7 +24,7 @@ const { menus } = toRefs(props);
 .overlay {
   position: fixed;
   display: flex;
-  top: 300px;
+  top: min(300px,35vh);
   width: min(600px,100vw);
   display: flex; /* 使用 flexbox */
   justify-content: center; /* 居中对齐 */
@@ -35,14 +35,14 @@ const { menus } = toRefs(props);
   display: flex; /* 使按钮内容纵向排列 */
   flex-direction: column; /* 纵向排列 */
   align-items: center; /* 水平居中对齐 */
-  margin: 50px 20px; /* 按钮间距 */
+  margin: min(50px,12vw) min(20px,2vw); /* 按钮间距 */
   cursor: pointer; /* 鼠标悬停时变为手指形状 */
-  font-size: 24px;
+  font-size: clamp(16px,5vw,24px);
 }
 
 .button-icon {
-  width: 60px; /* 调整图标的大小 */
-  height: 60px; /* 保持宽高一致 */
+  width: min(60px,20vw); /* 调整图标的大小 */
+  height: min(60px,15vw); /* 保持宽高一致 */
   margin-bottom: 10px; /* 图片和文字之间的间距 */
 }
 

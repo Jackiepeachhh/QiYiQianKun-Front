@@ -45,7 +45,7 @@ const {myState,enemyState} = toRefs(props)
 .online-player {
     position: absolute;
     left: 0;
-    width: 520px;
+    width: min(520px,95vw);
     z-index: 1000; /* 确保在其他元素之上 */
     padding: 5px;
     border-radius: 10px;
@@ -55,14 +55,14 @@ const {myState,enemyState} = toRefs(props)
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 10px;
+    padding: min(3vw,10px);
     border-radius: 10px;
 }
 
 .avatar {
     margin-right: 20px;
-    width: 70px;
-    height: 70px;
+    width: min(70px,10vw);
+    height: min(70px,10vw);
 }
 
 .name-time {
@@ -75,8 +75,8 @@ const {myState,enemyState} = toRefs(props)
     background-color: rgba(0, 0, 0, 0.7); /* 黑色，70%透明 */
     padding: 5px;
     border-radius: 12px;
-    height: 70px;
-    font-size: 24px;
+    height: min(70px,10vw);
+    font-size: clamp(12px,6vw,24px);
 }
 
 .name {
