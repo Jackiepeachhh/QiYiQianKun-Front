@@ -33,9 +33,9 @@ const props = defineProps({
 <style scoped>
 /* 响应式按钮的样式 */
 .my-button {
-  height: 50px;
+  height: clamp(30px,10vw,50px);
   margin: 20px 0;
-  font-size: 40px;
+  font-size: clamp(24px,8vw,40px);
   background-color: rgba(255, 255, 255, 0.4); /* 半透明的背景色 */
   border-radius: 12px; /* 圆角 */
   border: none;
@@ -55,8 +55,8 @@ const props = defineProps({
 
 /* 响应式图片 */
 .my-button-icon {
-  width: 40px; /* 使用 vh 让图片响应 */
-  height: 40px; /* 保持宽高一致 */
+  width: clamp(24px,8vw,40px); /* 使用 vh 让图片响应 */
+  height: clamp(24px,8vw,40px); /* 保持宽高一致 */
   margin: 0 10px 0 0; /* 图片和文字之间的间距 */
 }
 

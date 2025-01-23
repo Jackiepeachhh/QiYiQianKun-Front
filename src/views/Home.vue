@@ -44,7 +44,7 @@ onMounted(() => {
 
 
 .content-area {
-  width: 600px;
+  width: min(600px,100vw);
   display: flex;
   justify-content: center;
   align-items: center;

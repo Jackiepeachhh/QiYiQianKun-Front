@@ -156,11 +156,11 @@ const select = (board) => {
 }
 
 .select-container h2{
-  font-size: 50px;
+  font-size: clamp(30px, 10vw, 50px);
   margin: 10px;
 }
 .select-board {
-  width: 500px;
+  width: min(500px,95vw);
   height: 80%; /* 高度设置为60%视口高度 */
   background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
   display: flex;
@@ -175,7 +175,7 @@ const select = (board) => {
   color: white; /* 字体颜色 */
   cursor: pointer; /* 鼠标悬停时显示手形光标 */
   text-align: center;
-  font-size: 36px;
+  font-size: clamp(24px, 8vw, 36px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* 分割线 */
 }
 

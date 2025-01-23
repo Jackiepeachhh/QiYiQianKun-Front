@@ -41,12 +41,12 @@ const {title,options,data} = toRefs(props)
 .my-form-content {
   background-color: #fff;
   padding: 20px;
-  width: 450px;
+  width: min(450px,90vw);
   border-radius: 12px;
 }
 
 .my-form-content h2{
-  font-size: 36px;
+  font-size: clamp(24px,8vw,36px);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -58,16 +58,16 @@ const {title,options,data} = toRefs(props)
 }
 
 .form-group label {
-  width: 150px;
+  width: min(120px,25vw);
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: clamp(16px,4vw,20px);
 }
 
 .input-field {
   font-size: 20px;
-  width: 400px;
-  padding: 15px;
+  width: min(300px,60vw);
+  padding: min(3vw,15px);
   border: 1px solid #ccc;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.8); /* 设置半透明背景 */

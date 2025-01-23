@@ -25,7 +25,7 @@ const { menus } = toRefs(props);
   position: fixed;
   display: flex;
   top: 300px;
-  width: 600px;
+  width: min(600px,100vw);
   display: flex; /* 使用 flexbox */
   justify-content: center; /* 居中对齐 */
   background-color: rgba(0, 0, 0, 0.7); /* 黑色，70%透明 */

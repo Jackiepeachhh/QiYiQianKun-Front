@@ -8,12 +8,12 @@
 .title{
   display: flex;
   justify-content: center;
-  width: 600px;
-  height: 350px;
+  width: min(600px,100vw);
+  height:min(350px,40vh);
 }
 
 .title img{
-  width: 600px;
+  width: min(600px,100vw);
 
 }
 </style>

@@ -20,21 +20,21 @@ const {buttons} = toRefs(props)
 
 <style scoped>
 .menu-bar {
-  width: 600px;
+  width: min(600px,100vw);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .menu-row {
-  width: 350px;
+  width: min(350px,70vw);
   display: flex;
   justify-content: space-around;
   margin-bottom: 20px;
 }
 .menu-bar button {
   padding: 10px 20px;
-  font-size: 24px;
+  font-size: clamp(12px,5vw,24px);
   background-color: #4682B4;
   color: white;
   border: none;

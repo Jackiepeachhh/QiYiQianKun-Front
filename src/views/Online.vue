@@ -44,24 +44,25 @@ onMounted(() => {
 
 <style scoped>
 .online-title{
-  height: 350px;
+  height: min(350px,40vh);
   display: flex;
   flex-direction:  column;
   align-items: center;
 }
 
 .online-title img{
-  width: 300px;
+  margin-top: 30px;
+  width: min(300px,60vw);
 }
 
 .online-title h2{
-  font-size: 50px;
+  font-size: clamp(30px,12vw,50px);
   margin: auto;
 }
 
 
 .content-area {
-  width: 600px;
+  width: min(600px,100vw);
 
 }
 

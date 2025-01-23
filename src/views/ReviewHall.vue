@@ -53,15 +53,15 @@ onMounted(async ()=>{
   height: 80px;
 }
 .online-title h2{
-  font-size: 50px;
+  font-size: clamp(30px,12vw,50px);
   margin: 10px;
 }
 
 .no-room{
-  font-size: 40px; /* 设置标题大小为 6vh */
+  font-size: clamp(24px,10vw,40px); /* 设置标题大小为 6vh */
 }
 .game-list {
-  width: 500px;
+  width: min(500px,90vw);
   height: calc(95% - 80px); 
   display: flex; 
   padding: 10px;

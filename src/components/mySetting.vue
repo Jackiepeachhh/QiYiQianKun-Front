@@ -37,7 +37,7 @@ const {setings,value} = toRefs(props)
   display: flex;
   position: fixed;
   top: 0;
-  width: 600px;
+  width: min(600px,100vw);
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;

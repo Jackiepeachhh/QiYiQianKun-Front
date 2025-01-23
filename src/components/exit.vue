@@ -54,8 +54,8 @@ const handleExit = () => {
 
 
 .exit-icon img {
-  width: 50px; /* 图标的宽度 */
-  height: 50px; /* 图标的高度 */
+  width: min(12vw,50px); /* 图标的宽度 */
+  height: min(12vw,50px); /* 图标的高度 */
  
 }
 </style>

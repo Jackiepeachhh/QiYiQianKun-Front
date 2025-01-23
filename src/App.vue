@@ -31,8 +31,9 @@ a{
 }
 
 .container{
+  width: min(600px,100vw);
   position: relative;
-  width: 600px;
   font-family: '楷体', sans-serif;
 }
+
 </style>
