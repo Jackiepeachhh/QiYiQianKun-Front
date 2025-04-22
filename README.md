@@ -15,7 +15,7 @@ Vue + Vite
 ### 下载项目
 
 ```
-git clone https://github.com/leicd458/My-CChess-Front.git
+git clone https://github.com/Jackiepeachhh/QiYiQianKun-Front.git
 ```
 
 ### 下载依赖
