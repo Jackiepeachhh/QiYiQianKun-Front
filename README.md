@@ -4,7 +4,7 @@
 
 棋弈乾坤——基于SprintBoot+Vue的实时象棋对弈平台
 
-前端部分，后端项目地址https://github.com/leicd458/My-CChess-Back
+前端部分，后端项目地址https://github.com/Jackiepeachhh/QiYiQianKun-Back
 
 ## 框架
 
