@@ -1,5 +1,6 @@
-# 中国大学生计算机设计大赛项目：棋弈乾坤——基于SprintBoot+Vue的实时象棋对弈平台
+# 棋弈乾坤——基于SprintBoot+Vue的实时象棋对弈平台
 
+中国大学生计算机设计大赛项目：
 棋弈乾坤——基于SprintBoot+Vue的实时象棋对弈平台，前端部分，后端项目地址https://github.com/leicd458/My-CChess-Back
 
 ## 框架
